@@ -17,7 +17,7 @@
     const day = document.getElementById('key-day').value.trim();
     const month = document.getElementById('key-month').value.trim();
     const year = document.getElementById('key-year').value.trim();
-    if (/^0?5$/.test(day) && /^0?2$/.test(month) && year === '2024') unlock();
+    if (/^0?5$/.test(day) && /^0?2$/.test(month) && year === '2025') unlock();
     else { status.textContent = 'Esa no es nuestra fecha. Piensa en el día en que nos conocimos. ♡'; document.getElementById('key-day').focus(); }
   });
   document.getElementById('lock-universe').addEventListener('click', () => {
@@ -30,7 +30,7 @@
   window.addEventListener('pageshow',event=>{if(event.persisted){universe.hidden=true;gate.hidden=false;}});
   const messageDialog = document.getElementById('message-dialog');
   const messages = {
-    beginning: ['✧','El comienzo','El 5 de febrero de 2024 tiene su propia estrella. El día en que nuestros caminos se encontraron.'],
+    beginning: ['✧','El comienzo','El 5 de febrero de 2025 tiene su propia estrella. El día en que nuestros caminos se encontraron.'],
     moon: ['☾','La luna','Hay personas que hacen que incluso una noche cualquiera se sienta un poco más bonita.'],
     star: ['✦','Mi estrella favorita','Fernanda, entre todas las luces de este pequeño cielo, la tuya tiene un lugar especial.'],
     bow: ['♡','Los pequeños detalles','Un lazo de Hello Kitty, tu personaje favorito, una foto tuya. Cosas sencillas que hacen que este lugar sea tan tuyo.'],

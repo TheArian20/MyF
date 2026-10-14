@@ -23,8 +23,8 @@ addEventListener('pointermove',event=>{if(reducedMotion.matches||event.pointerTy
 if(!reducedMotion.matches&&'IntersectionObserver' in window){document.documentElement.classList.add('js-motion');const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(section=>observer.observe(section));}
 function updateProgress(){const total=document.documentElement.scrollHeight-innerHeight;document.querySelector('.progress').style.width=(total>0?scrollY/total*100:0)+'%';}
 addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
-// 5 de febrero de 2024, medianoche de Colombia.
-const origin=new Date('2024-02-05T00:00:00-05:00').getTime();
+// 5 de febrero de 2025, medianoche de Colombia.
+const origin=new Date('2025-02-05T00:00:00-05:00').getTime();
 function updateTime(){const elapsed=Math.max(0,Date.now()-origin);document.getElementById('days').textContent=Math.floor(elapsed/86400000).toLocaleString('es-CO');document.getElementById('hours').textContent=String(Math.floor(elapsed/3600000)%24).padStart(2,'0');document.getElementById('minutes').textContent=String(Math.floor(elapsed/60000)%60).padStart(2,'0');}updateTime();setInterval(updateTime,15000);
 let wishIndex=0;const wishes=['Que algo bonito encuentre su camino hacia ti. ♡','Que nunca te falten razones para sonreír. ✧','Que tus sueños encuentren un cielo donde brillar. ☾','Que los pequeños momentos se vuelvan grandes recuerdos. ♡'];
 document.getElementById('wish').addEventListener('click',()=>{document.getElementById('wish-message').textContent=wishes[wishIndex++%wishes.length];if(!reducedMotion.matches)shooting.push({x:width*.08,y:height*.15,start:performance.now()});});
